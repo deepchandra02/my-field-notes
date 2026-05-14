@@ -11,7 +11,7 @@ export default function Home() {
       <header className="mb-16">
         <h1 className="text-4xl tracking-wide mb-4">Field Notes</h1>
         <p className="text-muted-foreground text-[15px] leading-relaxed max-w-xl">
-          A working notebook — long essays when the thinking deserves it,
+          Testing dev - A working notebook — long essays when the thinking deserves it,
           short notes when an observation is enough.
         </p>
       </header>
