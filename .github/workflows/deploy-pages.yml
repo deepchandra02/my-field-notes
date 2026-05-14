@@ -3,8 +3,6 @@ name: Deploy Pages
 on:
   push:
     branches: [main, dev]
-  pull_request:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -23,25 +21,16 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Determine staging ref
-        id: refs
-        run: |
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            echo "staging_ref=${{ github.event.pull_request.head.sha }}" >> $GITHUB_OUTPUT
-          else
-            echo "staging_ref=dev" >> $GITHUB_OUTPUT
-          fi
-
       - name: Checkout main (production source)
         uses: actions/checkout@v4
         with:
           ref: main
           path: prod-src
 
-      - name: Checkout staging source
+      - name: Checkout dev (staging source)
         uses: actions/checkout@v4
         with:
-          ref: ${{ steps.refs.outputs.staging_ref }}
+          ref: dev
           path: staging-src
 
       - name: Setup Node
