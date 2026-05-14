@@ -1,0 +1,46 @@
+---
+title: "The Architecture of Attention"
+date: 2026-05-10
+type: essay
+tags: [design, attention, software]
+description: "How software design shapes what we notice — and what we miss."
+draft: false
+---
+
+We talk about software as a tool, but most of the software we use is also a stage. It chooses what shows up, where, and how loudly. Long before a feature gets used, the layout has already decided what the user will see first.
+
+## The default is the design
+
+The thing a piece of software puts on the screen first is rarely an accident. It is the most expensive real estate the product owns, and the choices made there propagate downstream — into what gets remembered, what gets searched for, what gets ignored.
+
+<Aside>
+  This is the same reason newspaper front pages were fought over for a century. Top-of-the-fold was attention infrastructure long before "above the fold" became a CSS phrase.
+</Aside>
+
+When we design with the default in mind, we are designing the user's mental model. The defaults *are* the product, for almost everyone. Power users will configure their way around them; everyone else inherits whatever shipped on Tuesday.
+
+### What this looks like in practice
+
+A small example: a notes app that opens on a blank page versus one that opens on the most recently edited note. Both are "correct." But the first encourages capture and the second encourages continuity. The behaviors are different. The users self-select toward whichever the app makes easiest.
+
+## Margins as a form of restraint
+
+The blank space around a thing is also a choice. Generous margins say *this is the only thing you should be reading right now*. Dense layouts say *here are twelve things, pick one*. Neither is wrong, but they create different relationships with the reader.
+
+<Aside>
+  Tufte's marginalia were not just about aesthetics — they were a way of letting commentary breathe without interrupting the main thread. The margin was a second voice.
+</Aside>
+
+The web has spent twenty years figuring this out, mostly by overcorrecting. We went from text-soup pages to chrome-heavy app shells to, lately, calmer reading surfaces again. The shape of attention follows the shape of the page.
+
+## A working principle
+
+When in doubt: remove. The interface that demands the least attention to operate is usually the interface that earns the most attention for the thing it contains. The chrome should disappear; the content should be what's left.
+
+> The user did not come for your navigation bar. They came for what's behind it.
+
+That sentence is obvious until you watch a redesign cycle. Then it's the thing you have to repeat, gently, every meeting.
+
+## Closing note
+
+Designing for attention isn't about manipulating it. It's about being honest with the user about what this surface is *for* — and then making everything else quiet enough to let them act on it.

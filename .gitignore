@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Local reference / scratch
+reference_folder/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
